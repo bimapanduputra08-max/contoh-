@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honda Jambi – PT Citra Karya Intisentosa | Dealer Resmi Honda</title>
+<meta name="description" content="Dealer Resmi Honda Jambi – PT Citra Karya Intisentosa. DP ringan, cicilan fleksibel, proses mudah. Hubungi sales kami sekarang!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #CC0000;
+  --red-dark: #990000;
+  --red-light: #ff1a1a;
+  --black: #0a0a0a;
+  --dark: #111111;
+  --gray-dark: #1e1e1e;
+  --gray: #2e2e2e;
+  --gray-mid: #555;
+  --gray-light: #999;
+  --silver: #e8e8e8;
+  --white: #ffffff;
+  --off-white: #f7f7f5;
+  --wa: #25D366;
+  --wa-dark: #128C7E;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--black);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+h1,h2,h3,h4,h5 { font-family: 'Syne', sans-serif; line-height: 1.2; }
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+/* ──────────────────────────── UTILS ──────────────────────────── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 50px;
+  font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px;
+  cursor: pointer; border: none; transition: all .25s ease;
+  white-space: nowrap;
+}
+.btn-red { background: var(--red); color: #fff; }
+.btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(204,0,0,0.35); }
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-wa:hover { background: var(--wa-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
+.btn-outline { background: transparent; color: var(--black); border: 2px solid var(--black); }
+.btn-outline:hover { background: var(--black); color: #fff; }
+.btn-white { background: #fff; color: var(--red); }
+.btn-white:hover { background: var(--off-white); transform: translateY(-2px); }
+.btn-lg { padding: 16px 32px; font-size: 15px; }
+
+/* ──────────────────────────── PAGE SYSTEM ──────────────────────────── */
+.page { display: none; }
+.page.active { display: block; }
+
+/* ──────────────────────────── HEADER ──────────────────────────── */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 20px; max-width: 1200px; margin: 0 auto;
+}
+.logo {
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+}
+.logo-icon {
+  width: 42px; height: 42px; background: var(--red);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+}
+.logo-icon span {
+  font-family: 'Syne', sans-serif; font-weight: 800;
+  color: #fff; font-size: 22px; letter-spacing: -2px;
+}
+.logo-text { line-height: 1.1; }
+.logo-text strong {
+  font-family: 'Syne', sans-serif; font-weight: 700;
+  font-size: 15px; color: var(--black); display: block;
+}
+.logo-text span { font-size: 11px; color: var(--gray-light); }
+
+nav { display: flex; align-items: center; gap: 4px; }
+nav a {
+  padding: 8px 14px; border-radius: 8px;
+  font-size: 14px; font-weight: 500; color: var(--gray-mid);
+  transition: all .2s; cursor: pointer;
+}
+nav a:hover, nav a.active { color: var(--red); background: rgba(204,0,0,0.06); }
+
+.header-wa {
+  display: flex; align-items: center; gap: 8px;
+}
+.header-wa .btn { padding: 10px 18px; font-size: 13px; }
+
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  padding: 4px; border-radius: 6px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--black); margin: 5px 0; transition: all .3s;
+  border-radius: 2px;
+}
+
+.mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: #fff; padding: 80px 24px 24px;
+  flex-direction: column; gap: 4px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  padding: 14px 16px; border-radius: 10px;
+  font-family: 'Syne', sans-serif; font-weight: 600; font-size: 18px;
+  color: var(--black); cursor: pointer; transition: all .2s;
+}
+.mobile-menu a:hover { color: var(--red); background: rgba(204,0,0,0.06); }
+.mobile-menu .close-btn {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none; font-size: 28px; cursor: pointer;
+}
+
+/* ──────────────────────────── HERO ──────────────────────────── */
+.hero {
+  background: var(--dark);
+  position: relative; overflow: hidden;
+  padding: 64px 0 0;
+  min-height: 520px;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 50%, #0a0a0a 100%);
+}
+.hero-grid {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: end; max-width: 1200px; margin: 0 auto; padding: 0 20px;
+  gap: 40px;
+}
+.hero-content { padding-bottom: 64px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(204,0,0,0.15); border: 1px solid rgba(204,0,0,0.3);
+  color: #ff6666; padding: 6px 14px; border-radius: 50px;
+  font-size: 12px; font-weight: 600; margin-bottom: 20px;
+  letter-spacing: .5px; text-transform: uppercase;
+}
+.hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  color: #fff; font-weight: 800; margin-bottom: 16px;
+  line-height: 1.15;
+}
+.hero h1 em { color: var(--red); font-style: normal; }
+.hero p {
+  color: rgba(255,255,255,0.6); font-size: 16px;
+  margin-bottom: 32px; max-width: 400px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.hero-img {
+  position: relative; display: flex; align-items: flex-end; justify-content: center;
+}
+.hero-img img {
+  max-height: 340px; object-fit: contain;
+  filter: drop-shadow(0 20px 60px rgba(204,0,0,0.3));
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-strip {
+  position: relative; z-index: 1;
+  background: var(--red); padding: 14px 20px;
+  display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+}
+.hero-strip-item {
+  color: #fff; font-size: 13px; font-weight: 500;
+  display: flex; align-items: center; gap: 8px; opacity: 0.9;
+}
+.hero-strip-item strong { font-size: 15px; font-weight: 700; }
+
+/* ──────────────────────────── KEUNGGULAN ──────────────────────────── */
+.keunggulan { padding: 72px 0; background: #fff; }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-label {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--red); margin-bottom: 10px;
+}
+.section-header h2 { font-size: clamp(24px, 3.5vw, 38px); font-weight: 800; }
+.section-header p { color: var(--gray-mid); margin-top: 10px; font-size: 16px; }
+
+.keunggulan-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.keunggulan-card {
+  padding: 28px 24px; border-radius: var(--radius);
+  background: var(--off-white); border: 1px solid rgba(0,0,0,0.06);
+  transition: all .3s;
+  text-align: center;
+}
+.keunggulan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(204,0,0,0.15);
+}
+.k-icon {
+  width: 52px; height: 52px; background: rgba(204,0,0,0.08);
+  border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; font-size: 24px;
+}
+.keunggulan-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.keunggulan-card p { font-size: 13px; color: var(--gray-mid); line-height: 1.5; }
+
+/* ──────────────────────────── KATALOG ──────────────────────────── */
+.katalog { padding: 72px 0; background: var(--off-white); }
+
+.filter-bar {
+  display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 8px 20px; border-radius: 50px;
+  border: 2px solid rgba(0,0,0,0.1);
+  background: #fff; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+  font-family: 'Syne', sans-serif;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--red); color: #fff; border-color: var(--red);
+}
+
+.motor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.motor-card {
+  background: #fff; border-radius: var(--radius);
+  overflow: hidden; border: 1px solid rgba(0,0,0,0.06);
+  transition: all .3s; cursor: pointer;
+}
+.motor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.motor-card-img {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+  padding: 24px; display: flex; align-items: center; justify-content: center;
+  height: 180px; position: relative; overflow: hidden;
+}
+.motor-card-img::before {
+  content: '';
+  position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+  width: 80%; height: 20px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 50%; filter: blur(10px);
+}
+.motor-card-img img {
+  height: 130px; object-fit: contain;
+  transition: transform .3s;
+}
+.motor-card:hover .motor-card-img img { transform: scale(1.05); }
+.motor-card-body { padding: 20px; }
+.motor-cat {
+  font-size: 11px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--red); margin-bottom: 6px;
+}
+.motor-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+.motor-price { color: var(--gray-mid); font-size: 13px; margin-bottom: 14px; }
+.motor-price strong { color: var(--red); font-size: 16px; display: block; }
+.motor-card-body .btn { width: 100%; justify-content: center; font-size: 13px; }
+
+/* ──────────────────────────── PROMO ──────────────────────────── */
+.promo { padding: 72px 0; background: var(--dark); }
+.promo .section-header h2 { color: #fff; }
+.promo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.promo-card {
+  background: var(--gray-dark); border-radius: var(--radius);
+  padding: 28px 24px; border: 1px solid rgba(255,255,255,0.06);
+  position: relative; overflow: hidden; transition: all .3s;
+}
+.promo-card:hover { transform: translateY(-4px); border-color: rgba(204,0,0,0.3); }
+.promo-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--red);
+}
+.promo-icon { font-size: 36px; margin-bottom: 16px; }
+.promo-card h3 { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.promo-card p { color: rgba(255,255,255,0.5); font-size: 14px; line-height: 1.6; }
+.promo-tag {
+  display: inline-block; margin-top: 16px;
+  background: rgba(204,0,0,0.2); color: #ff6666;
+  padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 600;
+}
+
+/* ──────────────────────────── SIMULASI ──────────────────────────── */
+.simulasi { padding: 72px 0; background: #fff; }
+.simulasi-wrapper {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.simulasi-info h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 800; margin-bottom: 16px; }
+.simulasi-info p { color: var(--gray-mid); margin-bottom: 24px; font-size: 15px; }
+
+.sim-form { background: var(--off-white); padding: 32px; border-radius: var(--radius); }
+.form-group { margin-bottom: 20px; }
+.form-group label {
+  display: block; font-size: 13px; font-weight: 600;
+  margin-bottom: 8px; color: var(--gray-mid);
+}
+.form-group select, .form-group input {
+  width: 100%; padding: 12px 16px;
+  border: 2px solid rgba(0,0,0,0.1); border-radius: var(--radius-sm);
+  background: #fff; font-size: 14px; font-family: 'DM Sans', sans-serif;
+  color: var(--black); transition: border .2s; outline: none;
+}
+.form-group select:focus, .form-group input:focus {
+  border-color: var(--red);
+}
+.sim-result {
+  margin-top: 20px; padding: 20px;
+  background: #fff; border-radius: var(--radius-sm);
+  border: 2px solid rgba(204,0,0,0.15);
+  display: none;
+}
+.sim-result.show { display: block; }
+.sim-result-label { font-size: 12px; color: var(--gray-light); margin-bottom: 4px; }
+.sim-result-val { font-size: 24px; font-weight: 800; color: var(--red); font-family: 'Syne', sans-serif; }
+
+/* ──────────────────────────── TESTIMONI ──────────────────────────── */
+.testimoni { padding: 72px 0; background: var(--off-white); }
+.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.testi-card {
+  background: #fff; padding: 28px; border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.06); transition: all .3s;
+}
+.testi-card:hover { box-shadow: var(--shadow-md); }
+.testi-stars { color: #f5a623; font-size: 14px; margin-bottom: 12px; }
+.testi-text { font-size: 14px; color: var(--gray-mid); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--red); display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 16px; flex-shrink: 0;
+}
+.testi-author-info strong { font-size: 14px; font-weight: 600; display: block; }
+.testi-author-info span { font-size: 12px; color: var(--gray-light); }
+
+/* ──────────────────────────── FOOTER ──────────────────────────── */
+footer {
+  background: var(--black); color: rgba(255,255,255,0.7);
+  padding: 56px 0 0;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 40px;
+}
+.footer-brand .logo-icon { background: var(--red); }
+.footer-brand .logo { margin-bottom: 16px; }
+.footer-brand .logo-text strong { color: #fff; }
+.footer-brand p { font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+.footer-social { display: flex; gap: 10px; }
+.social-btn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: rgba(255,255,255,0.1); display: flex; align-items: center;
+  justify-content: center; font-size: 15px; transition: all .2s; cursor: pointer;
+}
+.social-btn:hover { background: var(--red); }
+
+.footer-col h4 {
+  font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700;
+  color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+  font-size: 14px; color: rgba(255,255,255,0.5);
+  transition: color .2s; cursor: pointer;
+}
+.footer-col ul li a:hover { color: #fff; }
+.footer-info { font-size: 14px; margin-bottom: 8px; display: flex; gap: 8px; align-items: flex-start; }
+.footer-info svg { flex-shrink: 0; margin-top: 2px; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px; text-align: center;
+  font-size: 13px; color: rgba(255,255,255,0.3);
+}
+
+/* ──────────────────────────── WA FLOATING ──────────────────────────── */
+.wa-float {
+  position: fixed; bottom: 24px; right: 24px; z-index: 998;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+}
+.wa-float-btn {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--wa); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  cursor: pointer; transition: all .3s;
+  animation: pulse-wa 2s ease-in-out infinite;
+}
+.wa-float-btn:hover { transform: scale(1.1); }
+@keyframes pulse-wa {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 4px 40px rgba(37,211,102,0.7); }
+}
+.wa-float-label {
+  background: #fff; color: var(--black);
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 600;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+
+/* ──────────────────────────── DETAIL PAGE ──────────────────────────── */
+.detail-hero {
+  background: var(--off-white); padding: 40px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.detail-main-img {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-radius: var(--radius); padding: 40px;
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 4/3; overflow: hidden;
+}
+.detail-main-img img { max-height: 260px; object-fit: contain; transition: all .4s; }
+.color-thumbs { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.color-thumb {
+  width: 40px; height: 40px; border-radius: 8px; cursor: pointer;
+  border: 3px solid transparent; transition: all .2s; overflow: hidden;
+  background: #e0e0e0;
+}
+.color-thumb.active { border-color: var(--red); }
+.color-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.detail-info { padding-top: 8px; }
+.detail-cat {
+  font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--red); margin-bottom: 8px;
+}
+.detail-info h1 { font-size: clamp(26px, 3vw, 38px); font-weight: 800; margin-bottom: 6px; }
+.detail-price-label { font-size: 13px; color: var(--gray-mid); }
+.detail-price { font-size: 28px; font-weight: 800; color: var(--red); font-family: 'Syne', sans-serif; margin-bottom: 24px; }
+.detail-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+.detail-ctas .btn { flex: 1; justify-content: center; min-width: 140px; }
+
+.spec-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.spec-table tr { border-bottom: 1px solid rgba(0,0,0,0.06); }
+.spec-table td {
+  padding: 10px 0; font-size: 14px; vertical-align: top;
+}
+.spec-table td:first-child {
+  color: var(--gray-mid); font-weight: 500; width: 45%; padding-right: 12px;
+}
+.spec-table td:last-child { font-weight: 600; }
+
+.detail-sections { padding: 56px 0; }
+.detail-sections .container > * { margin-bottom: 40px; }
+.detail-section-title { font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid rgba(0,0,0,0.06); }
+.keunggulan-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.keunggulan-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--off-white); padding: 16px; border-radius: var(--radius-sm);
+}
+.k-check { color: var(--red); font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.keunggulan-item p { font-size: 14px; font-weight: 500; }
+
+.cta-banner {
+  background: var(--red); border-radius: var(--radius);
+  padding: 40px; text-align: center; color: #fff;
+}
+.cta-banner h2 { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+.cta-banner p { opacity: 0.8; margin-bottom: 24px; }
+.cta-banner .btn-white { display: inline-flex; }
+
+/* ──────────────────────────── PRODUK PAGE ──────────────────────────── */
+.page-hero {
+  background: var(--dark); padding: 56px 0;
+  text-align: center; color: #fff;
+}
+.page-hero h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; margin-bottom: 10px; }
+.page-hero p { color: rgba(255,255,255,0.5); font-size: 16px; }
+
+.produk-section { padding: 56px 0; }
+
+/* ──────────────────────────── BREADCRUMB ──────────────────────────── */
+.breadcrumb {
+  padding: 14px 0; font-size: 13px; color: var(--gray-mid);
+  display: flex; align-items: center; gap: 6px;
+}
+.breadcrumb a { cursor: pointer; }
+.breadcrumb a:hover { color: var(--red); }
+.breadcrumb span { opacity: 0.4; }
+
+/* ──────────────────────────── HONDA NEWS ──────────────────────────── */
+.honda-news { padding: 72px 0; background: #fff; }
+.news-header-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 36px; gap: 16px; flex-wrap: wrap;
+}
+.news-header-row .section-header { text-align: left; margin-bottom: 0; }
+.news-search {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--off-white); border: 2px solid rgba(0,0,0,0.08);
+  border-radius: 50px; padding: 8px 16px; min-width: 220px;
+  transition: border .2s;
+}
+.news-search:focus-within { border-color: var(--red); }
+.news-search input {
+  border: none; background: transparent; outline: none;
+  font-family: 'DM Sans', sans-serif; font-size: 14px; flex: 1; color: var(--black);
+}
+.news-search svg { color: var(--gray-light); flex-shrink: 0; }
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.news-card {
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.07); background: #fff;
+  transition: all .3s; cursor: pointer;
+}
+.news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.news-card-img {
+  position: relative; aspect-ratio: 16/9; overflow: hidden;
+  background: var(--silver);
+}
+.news-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.news-card:hover .news-card-img img { transform: scale(1.05); }
+.news-cat-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--red); color: #fff;
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 50px;
+}
+.news-card-body { padding: 20px; }
+.news-card-body h3 {
+  font-size: 16px; font-weight: 700; margin-bottom: 8px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.news-card-body p {
+  font-size: 13px; color: var(--gray-mid); line-height: 1.6; margin-bottom: 16px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.news-card-body .btn-news {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: var(--red);
+  font-family: 'Syne', sans-serif; transition: gap .2s;
+}
+.news-card:hover .btn-news { gap: 10px; }
+.news-footer-row {
+  display: flex; justify-content: flex-end; margin-top: 28px;
+}
+
+/* ──────────────────────────── LAYANAN KAMI ──────────────────────────── */
+.layanan { padding: 72px 0; background: var(--dark); position: relative; overflow: hidden; }
+.layanan::before {
+  content: '';
+  position: absolute; top: -60px; right: -60px;
+  width: 300px; height: 300px; border-radius: 50%;
+  background: rgba(204,0,0,0.12); filter: blur(60px);
+}
+.layanan .section-header h2 { color: #fff; }
+.layanan-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.layanan-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius); overflow: hidden;
+  transition: all .3s; cursor: pointer;
+}
+.layanan-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(204,0,0,0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+}
+.layanan-card-img {
+  aspect-ratio: 16/9; overflow: hidden; background: #2a2a2a;
+  position: relative;
+}
+.layanan-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.layanan-card:hover .layanan-card-img img { transform: scale(1.06); }
+.layanan-card-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%);
+}
+.layanan-card-body { padding: 24px; }
+.layanan-card-icon { font-size: 28px; margin-bottom: 12px; }
+.layanan-card-body h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+.layanan-card-body p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 20px; }
+.btn-layanan {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 700; color: var(--red);
+  font-family: 'Syne', sans-serif; letter-spacing: .3px; transition: gap .2s;
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.layanan-card:hover .btn-layanan { gap: 10px; }
+
+/* ──────────────────────────── SERVIS ──────────────────────────── */
+.servis { padding: 72px 0; background: var(--off-white); }
+.servis-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.servis-card {
+  background: #fff; border-radius: var(--radius);
+  overflow: hidden; border: 1px solid rgba(0,0,0,0.07);
+  transition: all .3s;
+}
+.servis-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.servis-card-img {
+  aspect-ratio: 16/9; overflow: hidden; background: var(--silver);
+}
+.servis-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.servis-card:hover .servis-card-img img { transform: scale(1.05); }
+.servis-card-body { padding: 24px; }
+.servis-badge {
+  display: inline-block; background: rgba(204,0,0,0.08); color: var(--red);
+  font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 12px; border-radius: 50px; margin-bottom: 12px;
+}
+.servis-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+.servis-card-body p { font-size: 13px; color: var(--gray-mid); line-height: 1.7; }
+.servis-cta { text-align: center; padding: 40px; background: #fff; border-radius: var(--radius); border: 2px dashed rgba(204,0,0,0.2); }
+.servis-cta h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+.servis-cta p { color: var(--gray-mid); margin-bottom: 24px; font-size: 15px; }
+
+/* ──────────────────────────── FAQ ──────────────────────────── */
+.faq { padding: 72px 0; background: #fff; }
+.faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  border: 1px solid rgba(0,0,0,0.08); border-radius: var(--radius);
+  overflow: hidden; transition: border-color .2s;
+}
+.faq-item.open { border-color: var(--red); }
+.faq-q {
+  padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; gap: 12px; background: #fff;
+}
+.faq-q span { font-size: 15px; font-weight: 600; font-family: 'Syne', sans-serif; flex: 1; }
+.faq-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(204,0,0,0.08); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all .25s; color: var(--red); font-size: 18px; font-weight: 700;
+}
+.faq-item.open .faq-icon { background: var(--red); color: #fff; transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s;
+  padding: 0 20px; font-size: 14px; color: var(--gray-mid); line-height: 1.7;
+}
+.faq-item.open .faq-a { max-height: 200px; padding: 0 20px 18px; }
+
+.jam-box {
+  background: var(--dark); color: #fff; border-radius: var(--radius);
+  padding: 36px; position: sticky; top: 90px;
+}
+.jam-box h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+.jam-box > p { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 28px; }
+.jam-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.jam-row:last-of-type { border-bottom: none; }
+.jam-day { font-size: 14px; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 8px; }
+.jam-time { font-size: 14px; font-weight: 700; color: #fff; }
+.jam-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(37,211,102,0.15); color: #25D366;
+  padding: 6px 14px; border-radius: 50px;
+  font-size: 13px; font-weight: 600; margin-top: 20px;
+}
+.jam-dot { width: 8px; height: 8px; border-radius: 50%; background: #25D366; animation: pulse-dot 1.5s ease-in-out infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ──────────────────────────── RESPONSIVE ──────────────────────────── */
+@media (max-width: 900px) {
+  nav { display: none; }
+  .hamburger { display: block; }
+  .header-wa .btn { display: none; }
+
+  .hero-grid { grid-template-columns: 1fr; gap: 0; }
+  .hero-img { display: none; }
+  .hero-content { padding-bottom: 40px; }
+
+  .keunggulan-grid { grid-template-columns: repeat(2, 1fr); }
+  .motor-grid { grid-template-columns: repeat(2, 1fr); }
+  .promo-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .simulasi-wrapper { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .detail-grid { grid-template-columns: 1fr; }
+  .keunggulan-list { grid-template-columns: 1fr; }
+
+  .news-grid { grid-template-columns: 1fr; }
+  .news-header-row { flex-direction: column; align-items: flex-start; }
+  .news-search { width: 100%; }
+  .layanan-grid { grid-template-columns: 1fr; }
+  .servis-grid { grid-template-columns: 1fr; }
+  .faq-grid { grid-template-columns: 1fr; }
+  .jam-box { position: static; }
+}
+
+@media (max-width: 600px) {
+  .keunggulan-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .motor-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-strip { gap: 20px; }
+  .hero h1 { font-size: 26px; }
+  .hero-btns { flex-direction: column; }
+  .hero-btns .btn { text-align: center; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ──────── HEADER ──────── -->
+<header>
+  <div class="header-inner">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-icon"><span>H</span></div>
+      <div class="logo-text">
+        <strong>Honda Jambi</strong>
+        <span>PT Citra Karya Intisentosa</span>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <a onclick="showPage('home')" class="active">Beranda</a>
+      <a onclick="showPage('produk')">Produk</a>
+      <a onclick="scrollToSection('promo-section')">Promo</a>
+      <a onclick="scrollToSection('simulasi-section')">Simulasi Kredit</a>
+      <a onclick="scrollToSection('footer-section')">Kontak</a>
+    </nav>
+    <div class="header-wa">
+      <a href="https://wa.me/6288238187890?text=Halo,%20saya%20ingin%20tanya%20tentang%20motor%20Honda" target="_blank" class="btn btn-wa">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat Sales
+      </a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <button class="close-btn" onclick="toggleMenu()">✕</button>
+  <a onclick="showPage('home');toggleMenu()">🏠 Beranda</a>
+  <a onclick="showPage('produk');toggleMenu()">🏍️ Produk</a>
+  <a onclick="scrollToSection('promo-section');toggleMenu()">🎁 Promo</a>
+  <a onclick="scrollToSection('simulasi-section');toggleMenu()">💰 Simulasi Kredit</a>
+  <a onclick="scrollToSection('footer-section');toggleMenu()">📍 Kontak</a>
+  <br>
+  <a href="https://wa.me/6288238187890" target="_blank" class="btn btn-wa" style="justify-content:center;">
+    💬 Chat Sales Sekarang
+  </a>
+</div>
+
+<!-- ════════════════════ HOME PAGE ════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+          Dealer Resmi Honda – Jambi
+        </div>
+        <h1>Motor Impian,<br><em>Harga Terbaik</em><br>di Jambi</h1>
+        <p>DP ringan, cicilan fleksibel, proses mudah. Dapatkan penawaran terbaik hari ini.</p>
+        <div class="hero-btns">
+          <a onclick="showPage('produk')" class="btn btn-red btn-lg">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            Lihat Produk
+          </a>
+          <a href="https://wa.me/6288238187890?text=Halo,%20saya%20ingin%20tanya%20tentang%20promo%20motor%20Honda" target="_blank" class="btn btn-wa btn-lg">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat Sales Sekarang
+          </a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/44709/beat-right-front-three-quarter.jpeg?isig=0&q=75" alt="Honda Beat" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect fill=\'%23222\' width=\'400\' height=\'300\'/><text fill=\'%23666\' font-size=\'20\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'>Motor Honda</text></svg>'">
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="hero-strip-item">🏆 <span><strong>Dealer Resmi</strong> Honda</span></div>
+      <div class="hero-strip-item">⚡ <span><strong>Proses</strong> Cepat</span></div>
+      <div class="hero-strip-item">🔄 <span><strong>Tukar</strong> Tambah</span></div>
+      <div class="hero-strip-item">📞 <span><strong>Konsultasi</strong> Gratis</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════ HONDA NEWS ═══════ -->
+  <section class="honda-news">
+    <div class="container">
+      <div class="news-header-row">
+        <div class="section-header">
+          <div class="section-label">Info Terkini</div>
+          <h2>Honda News</h2>
+          <p>Temukan Berita Menarik seputar Honda di sini</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;flex-wrap:wrap">
+          <div class="news-search">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input type="text" placeholder="Cari berita Honda...">
+          </div>
+          <a href="maintenance.html" class="btn btn-red" style="align-self:flex-end">
+            🎁 Penawaran Menarik
+          </a>
+        </div>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75&auto=format" alt="Promo DP Ringan Honda" loading="lazy" onerror="this.parentElement.style.background='#f0f0f0'">
+            <span class="news-cat-badge">Promo</span>
+          </div>
+          <div class="news-card-body">
+            <h3>Promo DP Ringan Mulai 1 Jutaan! Bawa Pulang Motor Honda Impian Anda</h3>
+            <p>Dapatkan kemudahan kepemilikan motor Honda dengan uang muka super ringan dan cicilan yang terjangkau untuk semua tipe.</p>
+            <a href="https://wa.me/6288238187890?text=Halo%2C%20saya%20tertarik%20promo%20DP%20ringan" target="_blank" class="btn-news">Baca Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1609340965531-80b7e45e40e4?w=600&q=75&auto=format" alt="Motor Honda Terbaru" loading="lazy" onerror="this.parentElement.style.background='#f0f0f0'">
+            <span class="news-cat-badge">Motor</span>
+          </div>
+          <div class="news-card-body">
+            <h3>Honda Vario 160 Hadir dengan Fitur Baru yang Lebih Canggih dan Modern</h3>
+            <p>Update terbaru Honda Vario 160 menghadirkan panel digital yang lebih informatif dan fitur keselamatan yang ditingkatkan.</p>
+            <a href="#" onclick="showPage('detail','vario160');return false;" class="btn-news">Baca Selengkapnya →</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-card-img">
+            <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?w=600&q=75&auto=format" alt="Event Honda Jambi" loading="lazy" onerror="this.parentElement.style.background='#f0f0f0'">
+            <span class="news-cat-badge">Event</span>
+          </div>
+          <div class="news-card-body">
+            <h3>Test Ride Gratis Honda PCX 160 & ADV 160 di Showroom Kami Sepanjang Bulan Ini</h3>
+            <p>Rasakan langsung sensasi berkendara Honda PCX 160 dan ADV 160 secara gratis di dealer kami. Daftar sekarang!</p>
+            <a href="https://wa.me/6288238187890?text=Halo%2C%20saya%20mau%20daftar%20test%20ride" target="_blank" class="btn-news">Baca Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ LAYANAN KAMI ═══════ -->
+  <section class="layanan" id="layanan-section">
+    <div class="container">
+      <div class="section-header" style="text-align:center;margin-bottom:48px">
+        <div class="section-label" style="color:#ff6666">Yang Kami Tawarkan</div>
+        <h2>Layanan Kami</h2>
+        <p style="color:rgba(255,255,255,0.45)">Solusi Lengkap untuk Kebutuhan Motor Honda Anda</p>
+      </div>
+      <div class="layanan-grid">
+        <div class="layanan-card">
+          <div class="layanan-card-img">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=70&auto=format" alt="Showroom Honda" loading="lazy" onerror="this.parentElement.style.background='#2a2a2a'">
+          </div>
+          <div class="layanan-card-body">
+            <div class="layanan-card-icon">🏪</div>
+            <h3>Penjualan Motor</h3>
+            <p>Menyediakan berbagai tipe motor Honda terbaru dengan pilihan kredit dan pembayaran fleksibel sesuai kebutuhan.</p>
+            <button class="btn-layanan" onclick="showPage('produk')">Learn More →</button>
+          </div>
+        </div>
+        <div class="layanan-card">
+          <div class="layanan-card-img">
+            <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=600&q=70&auto=format" alt="Servis Motor Honda" loading="lazy" onerror="this.parentElement.style.background='#2a2a2a'">
+          </div>
+          <div class="layanan-card-body">
+            <div class="layanan-card-icon">🔧</div>
+            <h3>Pemeliharaan & Servis</h3>
+            <p>Servis berkala dan perawatan motor dengan teknisi profesional bersertifikat dan peralatan resmi Honda.</p>
+            <button class="btn-layanan" onclick="document.getElementById('servis-section').scrollIntoView({behavior:'smooth'})">Learn More →</button>
+          </div>
+        </div>
+        <div class="layanan-card">
+          <div class="layanan-card-img">
+            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&q=70&auto=format" alt="Sparepart Honda" loading="lazy" onerror="this.parentElement.style.background='#2a2a2a'">
+          </div>
+          <div class="layanan-card-body">
+            <div class="layanan-card-icon">⚙️</div>
+            <h3>Suku Cadang / Sparepart</h3>
+            <p>Tersedia suku cadang asli Honda (HGP) untuk menjaga performa dan keamanan motor Anda tetap prima.</p>
+            <button class="btn-layanan" onclick="alert('Halaman Sparepart sedang dalam pengembangan. Hubungi kami via WhatsApp!')">Learn More →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ SERVIS DETAIL ═══════ -->
+  <section class="servis" id="servis-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Perawatan Profesional</div>
+        <h2>Layanan Servis Resmi Honda</h2>
+        <p>Perawatan Tepat untuk Performa Maksimal</p>
+      </div>
+      <div class="servis-grid">
+        <div class="servis-card">
+          <div class="servis-card-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&auto=format" alt="Servis Ringan" loading="lazy" onerror="this.parentElement.style.background='#ddd'">
+          </div>
+          <div class="servis-card-body">
+            <span class="servis-badge">Ringan</span>
+            <h3>Servis Ringan</h3>
+            <p>Perawatan rutin seperti ganti oli, pengecekan rem, busi, dan rantai untuk menjaga kondisi motor tetap prima. Selesai dalam 1–2 jam.</p>
+          </div>
+        </div>
+        <div class="servis-card">
+          <div class="servis-card-img">
+            <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=600&q=70&auto=format" alt="Servis Berat" loading="lazy" onerror="this.parentElement.style.background='#ddd'">
+          </div>
+          <div class="servis-card-body">
+            <span class="servis-badge">Berat</span>
+            <h3>Servis Berat</h3>
+            <p>Perbaikan menyeluruh untuk komponen utama motor seperti mesin, transmisi, karburator, dan sistem kelistrikan oleh teknisi bersertifikat.</p>
+          </div>
+        </div>
+        <div class="servis-card">
+          <div class="servis-card-img">
+            <img src="https://images.unsplash.com/photo-1598522325074-042db73aa4e6?w=600&q=70&auto=format" alt="Servis Lengkap" loading="lazy" onerror="this.parentElement.style.background='#ddd'">
+          </div>
+          <div class="servis-card-body">
+            <span class="servis-badge">Lengkap</span>
+            <h3>Servis Lengkap</h3>
+            <p>Pemeriksaan dan perawatan total dari mesin hingga sistem keamanan menggunakan alat diagnostik resmi Honda untuk performa maksimal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="servis-cta">
+        <h3>Siap Servis Motor Anda?</h3>
+        <p>Booking jadwal servis sekarang, teknisi kami siap melayani Anda dengan cepat dan profesional</p>
+        <a href="https://wa.me/6288238187890?text=Halo%2C%20saya%20ingin%20booking%20servis%20motor%20Honda" target="_blank" class="btn btn-wa btn-lg">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Booking Servis Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ FAQ + JAM OPERASIONAL ═══════ -->
+  <section class="faq" id="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Pertanyaan</div>
+        <h2>Pertanyaan Umum (FAQ)</h2>
+        <p>Temukan jawaban dari pertanyaan yang sering ditanyakan</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Apakah dealer buka setiap hari?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Ya, kami buka setiap hari termasuk hari Minggu dan libur nasional, pukul 08.00 – 16.30 WIB. Kami siap melayani Anda!</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Apakah bisa kredit tanpa DP besar?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Tersedia berbagai pilihan DP mulai dari 1 jutaan dan tenor hingga 48 bulan sesuai kemampuan finansial Anda. Konsultasikan kebutuhan Anda dengan sales kami.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Apakah menerima tukar tambah motor?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Ya, kami menerima trade-in motor lama Anda dengan harga terbaik. Bawa motor Anda ke showroom atau hubungi sales kami untuk estimasi harga.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Apakah sparepart yang dijual asli Honda?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Semua suku cadang yang kami sediakan adalah original Honda bergaransi pabrikan (Honda Genuine Parts / HGP) untuk menjaga performa dan keamanan motor Anda.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Berapa lama proses pengajuan kredit?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Proses pengajuan kredit kami sangat cepat, biasanya selesai dalam 1 hari kerja. Siapkan KTP, KK, dan slip gaji/surat usaha untuk proses lebih lancar.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" onclick="toggleFaq(this)">
+              <span>Apakah ada garansi untuk motor baru?</span>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">Ya, semua motor baru Honda dilengkapi garansi resmi dari Honda selama 3 tahun atau 36.000 km. Garansi berlaku untuk kerusakan akibat cacat produksi.</div>
+          </div>
+        </div>
+        <div>
+          <div class="jam-box">
+            <h3>🕐 Jam Operasional</h3>
+            <p>Kami siap melayani Anda setiap hari</p>
+            <div class="jam-row">
+              <span class="jam-day">🗓️ Senin – Jumat</span>
+              <span class="jam-time">08.00 – 16.30</span>
+            </div>
+            <div class="jam-row">
+              <span class="jam-day">🗓️ Sabtu</span>
+              <span class="jam-time">08.00 – 16.30</span>
+            </div>
+            <div class="jam-row">
+              <span class="jam-day">🗓️ Minggu & Libur</span>
+              <span class="jam-time">08.00 – 16.30</span>
+            </div>
+            <div class="jam-status">
+              <div class="jam-dot"></div>
+              Buka Setiap Hari
+            </div>
+            <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)">
+              <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:12px">Hubungi kami via WhatsApp:</p>
+              <a href="https://wa.me/6288238187890" target="_blank" class="btn btn-wa" style="width:100%;justify-content:center;font-size:13px">
+                0882-3818-7890
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section class="keunggulan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Mengapa Kami?</div>
+        <h2>Keunggulan Dealer Kami</h2>
+        <p>Layanan terbaik untuk kepuasan Anda</p>
+      </div>
+      <div class="keunggulan-grid">
+        <div class="keunggulan-card">
+          <div class="k-icon">🏅</div>
+          <h3>Dealer Resmi Honda</h3>
+          <p>Sertifikat resmi Honda, produk asli bergaransi pabrikan</p>
+        </div>
+        <div class="keunggulan-card">
+          <div class="k-icon">⚡</div>
+          <h3>Proses Kredit Cepat</h3>
+          <p>Pengajuan mudah, persetujuan dalam 1 hari kerja</p>
+        </div>
+        <div class="keunggulan-card">
+          <div class="k-icon">🔄</div>
+          <h3>Bisa Tukar Tambah</h3>
+          <p>Motor lama Anda diterima, harga tukar terbaik</p>
+        </div>
+        <div class="keunggulan-card">
+          <div class="k-icon">💬</div>
+          <h3>Free Konsultasi</h3>
+          <p>Tim sales siap membantu memilih motor yang tepat</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG PREVIEW -->
+  <section class="katalog">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Koleksi Terpilih</div>
+        <h2>Motor Honda Terpopuler</h2>
+        <p>Pilih motor sesuai gaya dan kebutuhanmu</p>
+      </div>
+      <div class="motor-grid" id="home-motor-grid">
+        <!-- Populated by JS -->
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a onclick="showPage('produk')" class="btn btn-outline btn-lg">Lihat Semua Produk →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section class="promo" id="promo-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label" style="color:#ff6666">Penawaran Spesial</div>
+        <h2>Promo Bulan Ini</h2>
+      </div>
+      <div class="promo-grid">
+        <div class="promo-card">
+          <div class="promo-icon">💰</div>
+          <h3>DP Mulai 1 Jutaan</h3>
+          <p>Bawa pulang motor Honda impian kamu dengan uang muka yang sangat ringan.</p>
+          <span class="promo-tag">Berlaku s/d akhir bulan</span>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">📉</div>
+          <h3>Potongan Angsuran</h3>
+          <p>Dapatkan diskon cicilan khusus untuk pembelian di bulan ini dengan syarat mudah.</p>
+          <span class="promo-tag">Stok Terbatas</span>
+        </div>
+        <div class="promo-card">
+          <div class="promo-icon">🎁</div>
+          <h3>Bonus Helm & Jaket</h3>
+          <p>Setiap pembelian motor baru, gratis helm SNI + jaket Honda original senilai jutaan.</p>
+          <span class="promo-tag">Selama Persediaan Ada</span>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="https://wa.me/6288238187890?text=Halo,%20saya%20mau%20tanya%20promo%20motor%20Honda%20bulan%20ini" target="_blank" class="btn btn-wa btn-lg">
+          Tanya Promo via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULASI KREDIT -->
+  <section class="simulasi" id="simulasi-section">
+    <div class="container">
+      <div class="simulasi-wrapper">
+        <div class="simulasi-info">
+          <div class="section-label">Tools</div>
+          <h2>Simulasi Kredit Motor Honda</h2>
+          <p>Hitung estimasi cicilan sesuai kemampuan finansial Anda. Gratis tanpa komitmen!</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--gray-mid)">
+              ✅ Simulasi cepat & mudah
+            </li>
+            <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--gray-mid)">
+              ✅ Tenor 12–48 bulan
+            </li>
+            <li style="display:flex;gap:10px;align-items:center;font-size:14px;color:var(--gray-mid)">
+              ✅ Hasil langsung tampil
+            </li>
+          </ul>
+        </div>
+        <div>
+          <form
+            id="sim-form"
+            class="sim-form"
+            method="POST"
+            action="https://formspree.io/f/xdalyaqk"
+          >
+            <!-- Hidden tracking inputs -->
+            <input type="hidden" id="field-source" name="source" value="organik">
+            <input type="hidden" id="field-referral" name="referral" value="organik">
+            <!-- Formspree: disable default redirect so we handle it ourselves -->
+            <input type="hidden" name="_next" value="">
+
+            <h3 style="font-size:18px;font-weight:700;margin-bottom:20px">Hitung Cicilan</h3>
+            <div class="form-group">
+              <label for="sim-motor">Nama Lengkap</label>
+              <input type="text" id="sim-nama" name="nama" placeholder="Nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label for="sim-telepon">Nomor WhatsApp</label>
+              <input type="tel" id="sim-telepon" name="telepon" placeholder="08xx-xxxx-xxxx" required>
+            </div>
+            <div class="form-group">
+              <label for="sim-motor">Pilih Tipe Motor</label>
+              <select id="sim-motor" name="tipe_motor" required>
+                <option value="">-- Pilih Motor --</option>
+                <option value="Honda Beat – Rp 14.000.000">Honda Beat – Rp 14.000.000</option>
+                <option value="Honda Vario 125 – Rp 18.000.000">Honda Vario 125 – Rp 18.000.000</option>
+                <option value="Honda Vario 160 – Rp 23.000.000">Honda Vario 160 – Rp 23.000.000</option>
+                <option value="Honda PCX 160 – Rp 25.000.000">Honda PCX 160 – Rp 25.000.000</option>
+                <option value="Honda ADV 160 – Rp 27.000.000">Honda ADV 160 – Rp 27.000.000</option>
+                <option value="Honda CB150R – Rp 24.000.000">Honda CB150R – Rp 24.000.000</option>
+                <option value="Honda CBR 150R – Rp 28.000.000">Honda CBR 150R – Rp 28.000.000</option>
+                <option value="Honda Supra GTR 150 – Rp 16.000.000">Honda Supra GTR 150 – Rp 16.000.000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sim-dp">Uang Muka (DP)</label>
+              <input type="number" id="sim-dp" name="dp" placeholder="Contoh: 3000000" min="0">
+            </div>
+            <div class="form-group">
+              <label for="sim-tenor">Tenor (bulan)</label>
+              <select id="sim-tenor" name="tenor">
+                <option value="12">12 bulan</option>
+                <option value="24" selected>24 bulan</option>
+                <option value="36">36 bulan</option>
+                <option value="48">48 bulan</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-red" style="width:100%;justify-content:center;margin-bottom:10px" onclick="hitungSimulasi()">
+              Hitung Cicilan
+            </button>
+            <div class="sim-result" id="sim-result">
+              <div class="sim-result-label">Estimasi Cicilan per Bulan</div>
+              <div class="sim-result-val" id="sim-result-val">–</div>
+              <p style="font-size:12px;color:var(--gray-light);margin-top:8px">*Simulasi ini merupakan perkiraan. Hubungi sales untuk penawaran resmi.</p>
+            </div>
+            <button type="submit" id="sim-submit" class="btn btn-wa" style="width:100%;justify-content:center;margin-top:12px">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Kirim & Konsultasi via WA
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section class="testimoni">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Pelanggan Kami</div>
+        <h2>Apa Kata Mereka?</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Pelayanan sangat ramah dan cepat! Proses kredit disetujui dalam 1 hari. Motor langsung bisa dibawa pulang. Sangat puas!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div class="testi-author-info">
+              <strong>Reza Pratama</strong>
+              <span>Honda Beat – Januari 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Tukar tambah motor lama saya dihargai dengan sangat baik. Sales-nya jujur dan tidak ada biaya tersembunyi. Recommended!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">S</div>
+            <div class="testi-author-info">
+              <strong>Siti Nurhaliza</strong>
+              <span>Honda Vario 160 – Februari 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"DP ringan, cicilan aman di kantong. Salesnya sabar menjelaskan semua pilihan. Motor PCX-nya top banget, udah suka dari awal!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">A</div>
+            <div class="testi-author-info">
+              <strong>Ahmad Fauzi</strong>
+              <span>Honda PCX 160 – Maret 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><span>H</span></div>
+            <div class="logo-text">
+              <strong>Honda Jambi</strong>
+              <span style="color:rgba(255,255,255,0.4)">PT Citra Karya Intisentosa</span>
+            </div>
+          </div>
+          <p>Dealer Resmi Honda di Kota Jambi. Melayani pembelian tunai dan kredit dengan proses cepat dan terpercaya.</p>
+          <div class="footer-social">
+            <div class="social-btn">📘</div>
+            <div class="social-btn">📸</div>
+            <div class="social-btn">🐦</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Beranda</a></li>
+            <li><a onclick="showPage('produk')">Produk</a></li>
+            <li><a onclick="scrollToSection('promo-section')">Promo</a></li>
+            <li><a onclick="scrollToSection('simulasi-section')">Simulasi Kredit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Produk</h4>
+          <ul>
+            <li><a onclick="showPage('produk')">Motor Matic</a></li>
+            <li><a onclick="showPage('produk')">Motor Sport</a></li>
+            <li><a onclick="showPage('produk')">Motor Bebek</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <div class="footer-info">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Jl. Hayam Wuruk, Cemp. Putih, Kec. Jelutung, Kota Jambi 36124</span>
+          </div>
+          <div class="footer-info">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="https://wa.me/6288238187890">0882-3818-7890</a>
+          </div>
+          <div class="footer-info">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 15h-1v-6h1v6zm0-8h-1V7h1v2z"/></svg>
+            <span>Senin–Sabtu: 08.00–17.00 WIB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 PT Citra Karya Intisentosa – Dealer Resmi Honda Jambi. All rights reserved.
+    </div>
+  </footer>
+
+</div>
+
+<!-- ════════════════════ PRODUK PAGE ════════════════════ -->
+<div id="page-produk" class="page">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Katalog Motor Honda</h1>
+      <p>Temukan motor Honda terbaik sesuai kebutuhan dan gayamu</p>
+    </div>
+  </section>
+  <section class="produk-section">
+    <div class="container">
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-btn active" data-cat="all" onclick="filterMotor('all')">Semua</button>
+        <button class="filter-btn" data-cat="matic" onclick="filterMotor('matic')">Matic</button>
+        <button class="filter-btn" data-cat="sport" onclick="filterMotor('sport')">Sport</button>
+        <button class="filter-btn" data-cat="bebek" onclick="filterMotor('bebek')">Bebek / Cub</button>
+      </div>
+      <div class="motor-grid" id="produk-motor-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer id="produk-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><span>H</span></div>
+            <div class="logo-text">
+              <strong>Honda Jambi</strong>
+              <span style="color:rgba(255,255,255,0.4)">PT Citra Karya Intisentosa</span>
+            </div>
+          </div>
+          <p>Dealer Resmi Honda di Kota Jambi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Beranda</a></li>
+            <li><a onclick="showPage('produk')">Produk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <div class="footer-info">
+            <span>Jl. Hayam Wuruk, Cemp. Putih, Kec. Jelutung, Kota Jambi 36124</span>
+          </div>
+          <div class="footer-info">
+            <a href="https://wa.me/6288238187890">0882-3818-7890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 PT Citra Karya Intisentosa – Dealer Resmi Honda Jambi.
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════ DETAIL PAGE ════════════════════ -->
+<div id="page-detail" class="page">
+  <section class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a onclick="showPage('home')">Beranda</a>
+        <span>›</span>
+        <a onclick="showPage('produk')">Produk</a>
+        <span>›</span>
+        <span id="detail-breadcrumb-name">Detail Motor</span>
+      </div>
+      <div class="detail-grid">
+        <div>
+          <div class="detail-main-img">
+            <img id="detail-main-img" src="" alt="Motor Honda">
+          </div>
+          <div class="color-thumbs" id="color-thumbs"></div>
+        </div>
+        <div class="detail-info">
+          <div class="detail-cat" id="detail-cat">Matic</div>
+          <h1 id="detail-name">Honda Beat</h1>
+          <div class="detail-price-label">Harga mulai dari</div>
+          <div class="detail-price" id="detail-price">Rp 14.000.000</div>
+          <div class="detail-ctas">
+            <a id="detail-wa-btn" href="#" target="_blank" class="btn btn-wa">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Chat Tanya Stok
+            </a>
+            <a onclick="scrollToSection('simulasi-section');showPage('home');" class="btn btn-outline">
+              Simulasi Kredit
+            </a>
+          </div>
+          <h3 style="font-size:15px;margin-bottom:12px;font-weight:700">Spesifikasi Teknis</h3>
+          <table class="spec-table" id="spec-table"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail-sections">
+    <div class="container">
+      <div>
+        <h2 class="detail-section-title">Keunggulan Motor</h2>
+        <div class="keunggulan-list" id="detail-keunggulan"></div>
+      </div>
+      <div>
+        <h2 class="detail-section-title">Deskripsi</h2>
+        <p id="detail-desc" style="color:var(--gray-mid);font-size:15px;line-height:1.8"></p>
+      </div>
+      <div class="cta-banner">
+        <h2>Tertarik? Tanya Promo & Stok Sekarang!</h2>
+        <p>Sales kami siap membantu Anda mendapatkan penawaran terbaik</p>
+        <a id="cta-wa-btn" href="#" target="_blank" class="btn btn-white btn-lg">
+          💬 Tanya Promo & Stok Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><span>H</span></div>
+            <div class="logo-text">
+              <strong>Honda Jambi</strong>
+              <span style="color:rgba(255,255,255,0.4)">PT Citra Karya Intisentosa</span>
+            </div>
+          </div>
+          <p>Dealer Resmi Honda di Kota Jambi.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a onclick="showPage('home')">Beranda</a></li>
+            <li><a onclick="showPage('produk')">Produk</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <div class="footer-info">
+            <span>Jl. Hayam Wuruk, Cemp. Putih, Kec. Jelutung, Kota Jambi 36124</span>
+          </div>
+          <div class="footer-info">
+            <a href="https://wa.me/6288238187890">0882-3818-7890</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 PT Citra Karya Intisentosa – Dealer Resmi Honda Jambi.
+    </div>
+  </footer>
+</div>
+
+<!-- WA FLOATING -->
+<div class="wa-float">
+  <span class="wa-float-label">Tanya Sales</span>
+  <a href="https://wa.me/6288238187890?text=Halo,%20saya%20ingin%20tanya%20motor%20Honda" target="_blank" class="wa-float-btn" aria-label="Chat WhatsApp">
+    <svg width="28" height="28" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────
+const WA = '6288238187890';
+
+const motors = [
+  {
+    id: 'beat',
+    name: 'Honda Beat',
+    cat: 'matic',
+    catLabel: 'Matic',
+    price: 'Rp 14.000.000',
+    priceNum: 14000000,
+    img: 'https://cdn.motor1.com/images/mgl/JR1BL/s3/honda-beat-2021.jpg',
+    colors: [
+      { name: 'Merah', hex: '#CC0000', img: 'https://cdn.motor1.com/images/mgl/JR1BL/s3/honda-beat-2021.jpg' },
+      { name: 'Hitam', hex: '#222', img: 'https://cdn.motor1.com/images/mgl/JR1BL/s3/honda-beat-2021.jpg' },
+      { name: 'Putih', hex: '#f0f0f0', img: 'https://cdn.motor1.com/images/mgl/JR1BL/s3/honda-beat-2021.jpg' },
+    ],
+    specs: [
+      ['Mesin', '110cc eSP 4-Tak SOHC'],
+      ['Daya Maks.', '6,6 kW / 8000 rpm'],
+      ['Torsi Maks.', '9,3 Nm / 6500 rpm'],
+      ['Transmisi', 'Otomatis (CVT)'],
+      ['Kapasitas Tangki', '3,7 Liter'],
+      ['Sistem Starter', 'Electric & Kick Starter'],
+      ['Sistem Bahan Bakar', 'PGM-FI (Injeksi)'],
+      ['Berat Bersih', '93 kg'],
+    ],
+    keunggulan: [
+      'Irit bahan bakar, 59,5 km/liter',
+      'Desain sporty & modern',
+      'Teknologi eSP hemat energi',
+      'Perawatan mudah & murah',
+      'Rangka eSAF ringan & kuat',
+      'ACG Starter, nyalain tanpa suara',
+    ],
+    desc: 'Honda Beat adalah skuter matik terlaris di Indonesia dengan teknologi eSP (Enhanced Smart Power) yang membuatnya sangat irit dan bertenaga. Dengan bobot yang ringan berkat rangka eSAF (Enhanced Smart Architecture Frame), Beat sangat nyaman dikendarai di berbagai kondisi jalan. Dilengkapi sistem injeksi PGM-FI dan ISS (Idling Stop System) opsional, motor ini cocok untuk mobilitas harian yang efisien.'
+  },
+  {
+    id: 'vario125',
+    name: 'Honda Vario 125',
+    cat: 'matic',
+    catLabel: 'Matic',
+    price: 'Rp 18.000.000',
+    priceNum: 18000000,
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg/1200px-2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg',
+    colors: [
+      { name: 'Merah', hex: '#CC0000', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg/1200px-2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg' },
+      { name: 'Hitam', hex: '#222', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg/1200px-2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg' },
+    ],
+    specs: [
+      ['Mesin', '125cc eSP+ 4-Tak SOHC'],
+      ['Daya Maks.', '9,1 kW / 8500 rpm'],
+      ['Torsi Maks.', '12 Nm / 5000 rpm'],
+      ['Transmisi', 'Otomatis (CVT)'],
+      ['Kapasitas Tangki', '5,5 Liter'],
+      ['Sistem Starter', 'Electric Starter'],
+      ['Sistem Bahan Bakar', 'PGM-FI (Injeksi)'],
+      ['Berat Bersih', '110 kg'],
+    ],
+    keunggulan: [
+      'Performa bertenaga 125cc eSP+',
+      'Kompartemen bagasi luas',
+      'Desain sporty & premium',
+      'Teknologi Honda Smart Key',
+      'Konsumsi BBM 57 km/liter',
+      'Suspensi nyaman di segala jalan',
+    ],
+    desc: 'Honda Vario 125 hadir dengan teknologi eSP+ terbaru yang menghadirkan performa lebih bertenaga dengan efisiensi BBM optimal. Desain yang sporty dan modern menjadikannya pilihan favorit kaum muda. Kapasitas bagasi yang luas di bawah jok memudahkan penyimpanan helm dan barang bawaan. Fitur Honda Smart Key dengan Answer Back System membuatnya semakin praktis dan aman.'
+  },
+  {
+    id: 'vario160',
+    name: 'Honda Vario 160',
+    cat: 'matic',
+    catLabel: 'Matic',
+    price: 'Rp 23.000.000',
+    priceNum: 23000000,
+    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg/1200px-2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg',
+    colors: [
+      { name: 'Merah', hex: '#CC0000', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg/1200px-2022_Honda_Vario_125_%28eSP%2B%29_-_Indonesia.jpg' },
+    ],
+    specs: [
+      ['Mesin', '160cc DOHC 4-Tak'],
+      ['Daya Maks.', '12,1 kW / 8500 rpm'],
+      ['Torsi Maks.', '14,7 Nm / 6500 rpm'],
+      ['Transmisi', 'Otomatis (CVT)'],
+      ['Kapasitas Tangki', '5,5 Liter'],
+      ['Sistem Starter', 'Electric Starter'],
+      ['Sistem Bahan Bakar', 'PGM-FI (Injeksi)'],
+      ['Berat Bersih', '116 kg'],
+    ],
+    keunggulan: [
+      'Mesin 160cc DOHC bertenaga tinggi',
+      'Suspensi belakang penyesuai beban',
+      'Honda Smart Key system',
+      'Lampu LED full (depan & belakang)',
+      'Panel instrumen digital modern',
+      'Performa terbaik di kelasnya',
+    ],
+    desc: 'Honda Vario 160 adalah raja di kelas matic premium dengan mesin 160cc DOHC yang menghasilkan tenaga maksimal untuk berkendara percaya diri. Teknologi terkini Honda hadir pada Vario 160 mulai dari suspensi adaptif, Honda Smart Key, hingga panel instrumen digital yang informatif. Cocok bagi yang menginginkan performa tinggi dengan gaya yang prestisius.'
+  },
+  {
+    id: 'pcx',
+    name: 'Honda PCX 160',
+    cat: 'matic',
+    catLabel: 'Matic',
+    price: 'Rp 25.000.000',
+    priceNum: 25000000,
+    img: 'https://www.honda-indonesia.com/uploads/product/thumbnail/pcx-160-abs.png',
+    colors: [
+      { name: 'Hitam', hex: '#222', img: 'https://www.honda-indonesia.com/uploads/product/thumbnail/pcx-160-abs.png' },
+      { name: 'Putih', hex: '#f5f5f5', img: 'https://www.honda-indonesia.com/uploads/product/thumbnail/pcx-160-abs.png' },
+    ],
+    specs: [
+      ['Mesin', '160cc eSP+ SOHC 4-Tak'],
+      ['Daya Maks.', '11,8 kW / 8500 rpm'],
+      ['Torsi Maks.', '15 Nm / 6500 rpm'],
+      ['Transmisi', 'Otomatis (CVT)'],
+      ['Kapasitas Tangki', '8,1 Liter'],
+      ['Sistem Starter', 'Electric Starter'],
+      ['Rem', 'ABS (Anti-lock Braking)'],
+      ['Berat Bersih', '132 kg'],
+    ],
+    keunggulan: [
+      'Rem ABS untuk keamanan optimal',
+      'Bagasi under-seat sangat luas',
+      'Honda Smart Key',
+      'Desain premium mewah',
+      'Tangki besar 8,1 liter',
+      'Teknologi ACG Starter senyap',
+    ],
+    desc: 'Honda PCX 160 adalah matic premium yang menggabungkan performa tinggi, teknologi canggih, dan desain mewah. Dilengkapi rem ABS, PCX 160 memberikan keamanan maksimal di berbagai kondisi jalan. Bagasi under-seat yang luas cukup menampung dua buah helm full-face, menjadikannya pilihan ideal untuk perjalanan harian maupun touring dalam kota.'
+  },
+  {
+    id: 'adv',
+    name: 'Honda ADV 160',
+    cat: 'matic',
+    catLabel: 'Matic',
+    price: 'Rp 27.000.000',
+    priceNum: 27000000,
+    img: 'https://imgd.aeplcdn.com/1056x594/n/cw/ec/55935/adv150-right-side-view.jpeg?isig=0&q=75',
+    colors: [
+      { name: 'Abu-abu', hex: '#888', img: 'https://imgd.aeplcdn.com/1056x594/n/cw/ec/55935/adv150-right-side-view.jpeg?isig=0&q=75' },
+    ],
+    specs: [
+      ['Mesin', '160cc eSP+ SOHC 4-Tak'],
+      ['Daya Maks.', '11,8 kW / 8500 rpm'],
+      ['Torsi Maks.', '15 Nm / 6500 rpm'],
+      ['Transmisi', 'Otomatis (CVT)'],
+      ['Kapasitas Tangki', '8,1 Liter'],
+      ['Ground Clearance', '163 mm'],
+      ['Rem', 'ABS (Anti-lock Braking)'],
+      ['Berat Bersih', '135 kg'],
+    ],
+    keunggulan: [
+      'Ground clearance tinggi 163mm',
+      'Cocok untuk segala medan',
+      'Rem ABS standar',
+      'Desain adventure sporty',
+      'Bagasi luas & windscreen',
+      'Suspensi long travel nyaman',
+    ],
+    desc: 'Honda ADV 160 dirancang untuk petualang urban yang ingin menjelajahi berbagai medan dengan motor matic. Ground clearance 163mm dan suspensi long travel membuatnya mampu melewati jalanan berbatu, banjir, maupun jalan berlubang dengan mudah. Dengan DNA adventure yang kuat dan teknologi PCX 160, ADV 160 adalah jawaban untuk kamu yang tidak mau dikungkung kondisi jalan.'
+  },
+  {
+    id: 'cb150r',
+    name: 'Honda CB150R',
+    cat: 'sport',
+    catLabel: 'Sport',
+    price: 'Rp 24.000.000',
+    priceNum: 24000000,
+    img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/40124/cb150r-exmotion-right-side-view.jpeg?isig=0',
+    colors: [
+      { name: 'Merah', hex: '#CC0000', img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/40124/cb150r-exmotion-right-side-view.jpeg?isig=0' },
+      { name: 'Hitam', hex: '#222', img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/40124/cb150r-exmotion-right-side-view.jpeg?isig=0' },
+    ],
+    specs: [
+      ['Mesin', '150cc DOHC 4-Tak'],
+      ['Daya Maks.', '16,1 PS / 9000 rpm'],
+      ['Torsi Maks.', '14 Nm / 7000 rpm'],
+      ['Transmisi', 'Manual 6 Percepatan'],
+      ['Kapasitas Tangki', '12 Liter'],
+      ['Sistem Rem', 'ABS (Opsional)'],
+      ['Berat Bersih', '140 kg'],
+    ],
+    keunggulan: [
+      'Mesin DOHC 150cc bertenaga',
+      'Desain naked sport modern',
+      'Transmisi 6 percepatan presisi',
+      'Lampu LED futuristik',
+      'Rangka diamond baja tahan lama',
+      'Handling lincah di kota',
+    ],
+    desc: 'Honda CB150R StreetFire menghadirkan semangat sport berselera tinggi dengan mesin DOHC 150cc yang bertenaga. Desain naked sport bergaya urban streetfighter menjadikannya motor yang menarik perhatian di mana pun. Transmisi 6 percepatan memberikan pengalaman berkendara yang dinamis dan menyenangkan, cocok untuk kamu yang berjiwa muda dan penuh semangat.'
+  },
+  {
+    id: 'cbr',
+    name: 'Honda CBR 150R',
+    cat: 'sport',
+    catLabel: 'Sport',
+    price: 'Rp 28.000.000',
+    priceNum: 28000000,
+    img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/107851/cbr150r-right-side-view.jpeg?isig=0',
+    colors: [
+      { name: 'Merah', hex: '#CC0000', img: 'https://imgd.aeplcdn.com/1280x720/n/cw/ec/107851/cbr150r-right-side-view.jpeg?isig=0' },
+    ],
+    specs: [
+      ['Mesin', '150cc DOHC 4-Tak'],
+      ['Daya Maks.', '17,1 PS / 10000 rpm'],
+      ['Torsi Maks.', '14,4 Nm / 8500 rpm'],
+      ['Transmisi', 'Manual 6 Percepatan'],
+      ['Kapasitas Tangki', '12 Liter'],
+      ['Sistem Rem', 'ABS Dual Channel'],
+      ['Berat Bersih', '141 kg'],
+    ],
+    keunggulan: [
+      'DNA MotoGP CBR Series',
+      'ABS dual channel terdepan',
+      'Full fairing aerodinamis',
+      'Mesin DOHC rev tinggi',
+      'Riding position sport agresif',
+      'Lampu LED racing look',
+    ],
+    desc: 'Honda CBR 150R adalah sport fairing sejati yang membawa DNA balap MotoGP ke jalan raya. Dengan mesin DOHC 150cc bertenaga tinggi yang mampu meraung hingga 10.000 rpm, CBR 150R memberikan sensasi berkendara yang memukau. Desain full fairing aerodinamis yang terinspirasi dari CBR1000RR-R Fireblade menjadikannya penampil terbaik di kelasnya.'
+  },
+  {
+    id: 'supra',
+    name: 'Honda Supra GTR 150',
+    cat: 'bebek',
+    catLabel: 'Bebek',
+    price: 'Rp 16.000.000',
+    priceNum: 16000000,
+    img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/53255/supra-gtr-150-right-side-view.jpeg?isig=0',
+    colors: [
+      { name: 'Hitam', hex: '#222', img: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/53255/supra-gtr-150-right-side-view.jpeg?isig=0' },
+    ],
+    specs: [
+      ['Mesin', '150cc DOHC 4-Tak'],
+      ['Daya Maks.', '15,06 PS / 8500 rpm'],
+      ['Torsi Maks.', '13,7 Nm / 6500 rpm'],
+      ['Transmisi', 'Manual 5 Percepatan'],
+      ['Kapasitas Tangki', '4,2 Liter'],
+      ['Berat Bersih', '114 kg'],
+    ],
+    keunggulan: [
+      'Bebek sport bermesin 150cc',
+      'Akselerasi cepat & responsif',
+      'Desain sporty agresif',
+      'Perawatan mesin mudah',
+      'Efisiensi bahan bakar tinggi',
+      'Handling stabil & lincah',
+    ],
+    desc: 'Honda Supra GTR 150 adalah motor bebek sport terkencang dari Honda yang hadir dengan mesin DOHC 150cc bertenaga. Dirancang untuk rider yang menyukai gaya bebek namun tidak mau ketinggalan dalam hal performa. Desainnya yang agresif dengan aksen sporty menjadikannya tampil berbeda dari motor bebek konvensional. Transmisi 5 percepatan memberikan kontrol performa yang memuaskan.'
+  },
+];
+
+// ─── PAGE SYSTEM ─────────────────────────────────────────────────
+function showPage(page, motorId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  window.scrollTo(0, 0);
+
+  // Update nav
+  document.querySelectorAll('#main-nav a').forEach(a => a.classList.remove('active'));
+
+  if (page === 'home') {
+    document.querySelectorAll('#main-nav a')[0].classList.add('active');
+    renderHomeGrid();
+  } else if (page === 'produk') {
+    document.querySelectorAll('#main-nav a')[1].classList.add('active');
+    renderProdukGrid('all');
+  } else if (page === 'detail') {
+    openDetail(motorId);
+  }
+}
+
+function scrollToSection(id) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
+}
+
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ─── RENDER CARDS ─────────────────────────────────────────────────
+function motorCardHTML(m) {
+  return `
+    <div class="motor-card" onclick="showPage('detail','${m.id}')">
+      <div class="motor-card-img">
+        <img src="${m.img}" alt="${m.name}" loading="lazy"
+          onerror="this.style.display='none'">
+      </div>
+      <div class="motor-card-body">
+        <div class="motor-cat">${m.catLabel}</div>
+        <h3>${m.name}</h3>
+        <div class="motor-price">Mulai dari <strong>${m.price}</strong></div>
+        <button class="btn btn-red" onclick="event.stopPropagation();showPage('detail','${m.id}')">Lihat Detail</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderHomeGrid() {
+  const grid = document.getElementById('home-motor-grid');
+  if (!grid) return;
+  grid.innerHTML = motors.slice(0, 6).map(motorCardHTML).join('');
+}
+
+function renderProdukGrid(cat) {
+  const grid = document.getElementById('produk-motor-grid');
+  if (!grid) return;
+  const list = cat === 'all' ? motors : motors.filter(m => m.cat === cat);
+  grid.innerHTML = list.map(motorCardHTML).join('');
+
+  // Update filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.cat === cat);
+  });
+}
+
+function filterMotor(cat) {
+  renderProdukGrid(cat);
+}
+
+// ─── DETAIL PAGE ─────────────────────────────────────────────────
+function openDetail(motorId) {
+  const m = motors.find(x => x.id === motorId);
+  if (!m) return;
+
+  document.getElementById('detail-breadcrumb-name').textContent = m.name;
+  document.getElementById('detail-cat').textContent = m.catLabel;
+  document.getElementById('detail-name').textContent = m.name;
+  document.getElementById('detail-price').textContent = m.price;
+  document.getElementById('detail-main-img').src = m.img;
+  document.getElementById('detail-desc').textContent = m.desc;
+
+  const waMsg = encodeURIComponent(`Halo, saya tertarik dengan ${m.name} (${m.price}). Apakah masih ada stok? Terima kasih!`);
+  const waUrl = `https://wa.me/${WA}?text=${waMsg}`;
+  document.getElementById('detail-wa-btn').href = waUrl;
+  document.getElementById('cta-wa-btn').href = waUrl;
+
+  // Specs
+  const specTable = document.getElementById('spec-table');
+  specTable.innerHTML = m.specs.map(([k, v]) => `
+    <tr><td>${k}</td><td>${v}</td></tr>
+  `).join('');
+
+  // Colors
+  const colorThumbs = document.getElementById('color-thumbs');
+  colorThumbs.innerHTML = m.colors.map((c, i) => `
+    <div class="color-thumb ${i===0?'active':''}" title="${c.name}"
+      onclick="changeColor(this,'${c.img}','${m.id}')"
+      style="background:${c.hex}">
+    </div>
+  `).join('');
+
+  // Keunggulan
+  const kList = document.getElementById('detail-keunggulan');
+  kList.innerHTML = m.keunggulan.map(k => `
+    <div class="keunggulan-item">
+      <span class="k-check">✓</span>
+      <p>${k}</p>
+    </div>
+  `).join('');
+}
+
+function changeColor(el, img, motorId) {
+  document.querySelectorAll('.color-thumb').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  const mainImg = document.getElementById('detail-main-img');
+  mainImg.style.opacity = '0';
+  setTimeout(() => {
+    mainImg.src = img;
+    mainImg.style.opacity = '1';
+  }, 200);
+  mainImg.style.transition = 'opacity 0.2s';
+}
+
+// ─── URL PARAM TRACKING ──────────────────────────────────────────
+(function initTracking() {
+  const params = new URLSearchParams(window.location.search);
+  const source   = params.get('source')   || 'organik';
+  const referral = params.get('ref')      || 'organik';
+
+  // Write to hidden fields whenever DOM is ready
+  function applyTracking() {
+    const fsrc = document.getElementById('field-source');
+    const fref = document.getElementById('field-referral');
+    if (fsrc) fsrc.value = source;
+    if (fref) fref.value = referral;
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyTracking);
+  } else {
+    applyTracking();
+  }
+})();
+
+// ─── FORMSPREE ASYNC SUBMIT + WA REDIRECT ────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('sim-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById('sim-submit');
+    const originalText = submitBtn.innerHTML;
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '⏳ Mengirim...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        // Success → redirect ke WhatsApp
+        window.location.href =
+          'https://wa.me/6288238187890?text=Terima%20kasih%20sudah%20mengisi%20form%20simulasi%20kredit%20Honda!%20Saya%20ingin%20konsultasi%20lebih%20lanjut.';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      alert('Ups, terjadi kesalahan. Silakan coba lagi atau hubungi kami via WhatsApp langsung.');
+    }
+  });
+});
+
+// ─── SIMULASI HITUNG ─────────────────────────────────────────────
+function hitungSimulasi() {
+  const motorSelect = document.getElementById('sim-motor');
+  const motorVal    = motorSelect ? motorSelect.value : '';
+  const dp          = parseInt(document.getElementById('sim-dp').value) || 0;
+  const tenor       = parseInt(document.getElementById('sim-tenor').value);
+
+  if (!motorVal) { alert('Pilih tipe motor terlebih dahulu!'); return; }
+
+  // Extract numeric price from option value string, e.g. "Honda Beat – Rp 14.000.000"
+  const priceMatch = motorVal.match(/[\d.]+\.000$/);
+  let harga = 0;
+  if (priceMatch) {
+    harga = parseInt(priceMatch[0].replace(/\./g, '')) * 1000;
+  } else {
+    // fallback: try parsing any digit sequence ≥ 6 digits
+    const numMatch = motorVal.replace(/\./g, '').match(/\d{7,}/);
+    harga = numMatch ? parseInt(numMatch[0]) : 0;
+  }
+
+  if (!harga) { alert('Pilih tipe motor terlebih dahulu!'); return; }
+
+  const pinjaman = harga - dp;
+  if (pinjaman <= 0) { alert('DP terlalu besar!'); return; }
+
+  const bungaBulanan = 0.12 / 12;
+  const cicilan = pinjaman * (bungaBulanan * Math.pow(1 + bungaBulanan, tenor)) /
+                  (Math.pow(1 + bungaBulanan, tenor) - 1);
+
+  document.getElementById('sim-result-val').textContent =
+    'Rp ' + Math.round(cicilan).toLocaleString('id-ID') + ' / bulan';
+  document.getElementById('sim-result').classList.add('show');
+}
+
+// ─── FAQ ──────────────────────────────────────────────────────────
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  // close all
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────
+renderHomeGrid();
+</script>
+</body>
+</html>
